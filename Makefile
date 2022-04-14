@@ -14,6 +14,7 @@ run: rm  ## Run the application Docker container
 	$(call msg,"Starting application Docker container")
 	@docker run -d \
 			--restart always \
+			-p 8081:8081 \
 			--name $(PROJECT_NAME) \
 			$(REGISTRY_IMAGE)
 
