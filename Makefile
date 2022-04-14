@@ -13,7 +13,7 @@ build:
 run: rm  ## Run the application Docker container
 	$(call msg,"Starting application Docker container")
 	@docker run -d \
-			-v /home/pi/OSCWebMixer-main/config/default.json:/srv/OSCWebMixer/config/default.json \
+			-v /home/pi/default.json:/srv/OSCWebMixer/config/default.json \
 			--restart always \
 			-p 8081:8081 \
 			--name $(PROJECT_NAME) \
